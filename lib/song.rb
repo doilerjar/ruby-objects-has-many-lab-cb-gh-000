@@ -1,5 +1,5 @@
 class Song
-  @@all_songs = []
+  @@all_songs = 0
   
   attr_accessor :name, :artist
   
@@ -9,7 +9,7 @@ class Song
   end
   
   def song_count
-    @all_songs.length
+    @all_songs
   end
   
 end 
