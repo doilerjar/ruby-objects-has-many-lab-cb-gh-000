@@ -6,7 +6,7 @@ class Song
   
   def initialize(name)
     @song = name
-    @artist = ""
+    @artist = Artist.new
     @@all_songs += 1
     @@all << self
   end
@@ -14,5 +14,17 @@ class Song
   def song_count
     @all_songs
   end
+  
+  def self.all
+    @@all
+  end
+  
+  def artist_name
+    if @artist.name == ""
+      return nil 
+    else 
+      @artist.name
+    end
+  end 
   
 end 
